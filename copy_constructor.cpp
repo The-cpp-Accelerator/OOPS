@@ -38,9 +38,9 @@ int main() {
     MyClass obj3(obj2); // Copy constructor called (copying obj2 to obj3)
     std::cout << "obj3.value: " << obj3.value << std::endl;  // Output: obj3.value: 10
 
-    MyClass obj4(10);
+    MyClass *obj4 = new MyClass(obj3);
     obj4++;
-    cout << obj4.value << endl;
+    cout << obj4->value << endl;
 
     return 0;
 }

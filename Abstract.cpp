@@ -5,11 +5,13 @@ using namespace std;
 
 class Interface {
 public:
+	// pure virtual function
 	virtual void process() = 0;
 };
 
 class Impl : public Interface {
 public :
+	// 
 	virtual void process() {
 	}
 } ;
@@ -42,6 +44,8 @@ int main(){
 	//Animal A;
 	// dog d;
 	// d.speak();
+	// latest function called from iobj object if any fuction defined in iobj 
+	// is overriden in child class
 	Interface* iobj = new Impl() ;
 	do_work (iobj);
 	return 0;
