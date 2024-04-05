@@ -19,19 +19,31 @@ using namespace std;
 // 	cout << &s << endl;
 // }
 
-void foo(int* a){
-	*a = 3;
-	delete a;
-	a = nullptr;
+// void foo(int* a){
+// 	*a = 3;
+// 	delete a;
+// 	a = nullptr;
+// }
+
+void test(int &&p){
+
 }
 
+
+
 int main() {
+	int x = 5;
+	test(7);
+
+	// move converts lvalue to rvalue
+	test(std::move(x));
+
 	//Test t;
 	// tmp;
 	// foo(t, 1); // case 1
 	// foo(getTest(), 2); // case 2
 	// foo("Nishant");
-	int* x = new int(4);
-	foo(x);
-	cout << *x << endl;
+	// int* x = new int(4);
+	// foo(x);
+	//cout << *x << endl;
 }

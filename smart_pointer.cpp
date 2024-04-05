@@ -5,11 +5,12 @@ template <class T>
 class Auto_ptr1
 {
     T* m_ptr;
+    //string s;
 public:
     // Pass in a pointer to "own" via the constructor
-    Auto_ptr1(T* ptr=nullptr)
-        :m_ptr(ptr)
+    Auto_ptr1(T* ptr=nullptr):m_ptr(ptr)/*,s("Nishant")*/
     {
+        // s = "Nishant"
         cout << "Auto_ptr1 Constructor Called\n";
     }
 
@@ -18,6 +19,10 @@ public:
     {
         cout << "Auto_ptr1 Destructor Called\n";
         delete m_ptr;
+    }
+
+    T some_member_function() { 
+        return m_ptr;
     }
 
     // Overload dereference and operator-> so we can use Auto_ptr1 like m_ptr.
@@ -42,5 +47,6 @@ int main()
     // Also note that we use <Resource>, not <Resource*>
     // This is because we've defined m_ptr to have type T* (not T)
 
+    cout << (*res).some_member_function() << endl;
     return 0;
 } // res goes out of scope here, and destroys the allocated Resource for us

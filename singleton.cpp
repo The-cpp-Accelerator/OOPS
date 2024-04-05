@@ -3,7 +3,7 @@ using namespace std;
 
 class singleton{
 public:
-	static singleton& GetInstance(){
+	static singleton &GetInstance(){
 		static singleton Instance;
 		cout << "Instance Created Successfully\n";
 		return Instance;
@@ -19,8 +19,9 @@ private:
 	// prevents from assigning opertor
 	singleton& operator = (const singleton&) = delete /*deafult*/;
 };
-
+//singleton ins = singleton::GetInstance();
 int main(){
-	singleton ins = singleton::GetInstance();
+	//singleton s; --> give error
+	singleton &ins = singleton::GetInstance();
 	return 0;
 }
