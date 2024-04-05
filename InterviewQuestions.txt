@@ -1,0 +1,53 @@
+1. Can destructor be private ?
+ Yes , to make sure its object is not deleted by others
+
+ #include <iostream>
+class a {
+    ~a() {}
+    friend void delete_a(a* p);
+};
+
+
+void delete_a(a* p)  {
+    delete p;
+}
+
+int main()
+{
+    a *p = new a;
+    delete_a(p);
+
+    return 0;
+}
+
+2. Can Constructor be pointer ?
+Yes. Constructor may be private.
+
+In this case you may create class
+
+Using another (public) constructor
+Calling constructor from the same class
+Calling constructor from the friend class/function
+
+class Puma
+{
+public:
+    static Puma create(int a) { return Puma(a); }
+private:
+    int age;
+    Puma(int a) :age(a) {}    
+
+    friend Puma createPuma(int a);
+};
+
+Puma createPuma(int a) { return Puma(a); }
+
+3. Can constructor be virtual ?
+
+
+4. Can destructor be virtual ?
+
+
+
+
+ 
