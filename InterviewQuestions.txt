@@ -1,53 +1,43 @@
-1. Can destructor be private ?
- Yes , to make sure its object is not deleted by others
+Q. Can a destructor be private?
+Yes, a destructor can be made private to ensure that objects of the class are not deleted by external code.
 
- #include <iostream>
-class a {
-    ~a() {}
-    friend void delete_a(a* p);
+#include <iostream>
+class A {
+private:
+  ~A() {}
+  friend void deleteA(A* p);
 };
 
-
-void delete_a(a* p)  {
-    delete p;
+void deleteA(A* p) {
+  delete p;
 }
 
-int main()
-{
-    a *p = new a;
-    delete_a(p);
+int main() {
+  A *p = new A;
+  deleteA(p);
 
-    return 0;
+  return 0;
 }
 
-2. Can Constructor be pointer ?
-Yes. Constructor may be private.
+Q. Can a constructor be private?
+Yes, a constructor can be private. In such cases, you can create instances of the class using other mechanisms like static factory methods, friend functions, or other constructors within the class.
 
-In this case you may create class
-
-Using another (public) constructor
-Calling constructor from the same class
-Calling constructor from the friend class/function
-
-class Puma
-{
+class Puma {
 public:
-    static Puma create(int a) { return Puma(a); }
+  static Puma create(int a) { return Puma(a); }
 private:
-    int age;
-    Puma(int a) :age(a) {}    
+  int age;
+  Puma(int a) : age(a) {}
 
-    friend Puma createPuma(int a);
+  friend Puma createPuma(int a);
 };
 
 Puma createPuma(int a) { return Puma(a); }
 
-3. Can constructor be virtual ?
+Q. Can a constructor be virtual?
+No, constructors cannot be virtual. Virtual functions are used for runtime polymorphism, but constructors are called at compile time for object initialization.
 
+Q. Can a destructor be virtual?
+Yes, a destructor can be virtual. When a base class pointer is used to delete a derived class object, a virtual destructor ensures that the appropriate destructor is called for the derived class. This is crucial for proper cleanup of resources in polymorphic hierarchies.
 
-4. Can destructor be virtual ?
-
-
-
-
- 
+Q. smart pointer ?
