@@ -41,3 +41,8 @@ Q. Can a destructor be virtual?
 Yes, a destructor can be virtual. When a base class pointer is used to delete a derived class object, a virtual destructor ensures that the appropriate destructor is called for the derived class. This is crucial for proper cleanup of resources in polymorphic hierarchies.
 
 Q. smart pointer ?
+
+inhritance
+abstraction
+polymorphism
+encapsulation
