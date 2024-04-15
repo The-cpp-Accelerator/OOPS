@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//
 class Rectangle {
     int width, height;
 public:
