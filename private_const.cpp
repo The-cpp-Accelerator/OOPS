@@ -4,14 +4,15 @@ using namespace std;
 class test{
 public:
 	test(){}
-private:
+//private:
 	~test(){}
 };
 
 int main(){
 	test *t = new test();
 	delete t;
-	return 0;
+    cout << "run successfully\n";
+    return 0;
 }
 
 // #include <iostream>

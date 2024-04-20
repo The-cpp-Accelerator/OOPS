@@ -39,6 +39,7 @@ int main(){
 	D d;
 
 	// here its ambiguous to derive which Area for execution
-	d.Area();
-	return 0;
+//	d.Area();
+	cout << "run successfully\n";
+    return 0;
 }

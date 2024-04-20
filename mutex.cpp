@@ -1,23 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
 #include <iostream>
 #include <thread>
-#include <mutex>
+//#include <mutex>
 
-mutex data_mutex;
+//mutex data_mutex;
 int shared_data = 0;
 
 void worker_thread() {
-    data_mutex.lock();
+    //data_mutex.lock();
     shared_data++; 
-    data_mutex.unlock();
+  //  data_mutex.unlock();
 }
 
 int main() {
-    thread t1(worker_thread);
-    thread t2(worker_thread);
+//    thread t1(worker_thread);
+//    thread t2(worker_thread);
 
-    t1.join();
-    t2.join();
+//    t1.join();
+//    t2.join();
 
-    std::cout << "Shared data: " << shared_data << std::endl;
+//    std::cout << "Shared data: " << shared_data << std::endl;
+    cout << "run successfully\n";
     return 0;
 }

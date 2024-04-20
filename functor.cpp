@@ -11,5 +11,6 @@ int main(){
 	//StrCmp specified in map declaration
 	map<const char *, int, cmp> strMap;
 
+    cout << "run successfully\n";
 	return 0;
 }

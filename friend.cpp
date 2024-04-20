@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//
+// Nishant
 class Rectangle {
     int width, height;
 public:
@@ -17,5 +17,6 @@ int calculateArea(Rectangle rect) {
 int main() {
     Rectangle rect1(5, 3);
     std::cout << "Area: " << calculateArea(rect1) << std::endl;
+    cout << "run successfully\n";
     return 0;
 }

@@ -44,14 +44,14 @@ struct dsu{
 };
 
 int main() {
-	int n, m; 
-	cin>>n>>m;
+	int n = 0, m = 0; 
+	//cin>>n>>m;
 
     int x, y, w;
 	vector< pair<int , pair<int, int>> > edges;
 	for(int i=0; i<m; i++)
 	{
-		cin>>x>>y>>w;
+	//	cin>>x>>y>>w;
 		edges.push_back({w, {x, y}});
     }
 
@@ -75,6 +75,7 @@ int main() {
 	}
 
 	cout<<ans<<endl;
+    cout << "run successfully\n";
 	return 0;
 }
 

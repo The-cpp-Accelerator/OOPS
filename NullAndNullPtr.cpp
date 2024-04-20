@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+//#include<iostream>
 using namespace std;
 
 // int main(){
@@ -23,4 +24,5 @@ void func(char* str) {
 
 int main() {
     func(nullptr); // Ambiguous: could call either overload
+    cout << "run successfully\n";
 }

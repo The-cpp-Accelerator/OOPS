@@ -48,5 +48,6 @@ int main(){
 	// is overriden in child class
 	Interface* iobj = new Impl() ;
 	do_work (iobj);
+    cout << "run successfully\n";
 	return 0;
 }

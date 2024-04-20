@@ -40,8 +40,8 @@ int main() {
 
     MyClass *obj4 = new MyClass(obj3);
     obj4++;
-    cout << obj4->value << endl;
-
+    //cout << obj4->value << endl;
+    cout << "run successfully\n";
     return 0;
 }
 

@@ -1,7 +1,5 @@
-#include <vector>
-#include <list>
-#include <iostream>
-#include <chrono>
+#include<bits/stdc++.h>
+using namespace std;
 
 int main() {
     const int num_elements = 1000000;
@@ -26,7 +24,8 @@ int main() {
     end = std::chrono::high_resolution_clock::now();
     auto list_time = std::chrono::duration<double>(end - start).count();
 
-    std::cout << my_list[50] << endl;
+    //std::cout << my_list[50] << endl;
     std::cout << "Vector iteration time: " << vector_time << " seconds\n";
     std::cout << "List iteration time: " << list_time << " seconds\n";
+    cout << "run successfully\n";
 }

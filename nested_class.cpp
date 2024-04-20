@@ -21,5 +21,6 @@ int main() {
 	Out::In i;
 	i.getxy(&o);
 	o.getxy(&i);
-	return 0;
+    cout << "run successfully\n";
+    return 0;
 }

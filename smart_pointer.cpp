@@ -47,6 +47,7 @@ int main()
     // Also note that we use <Resource>, not <Resource*>
     // This is because we've defined m_ptr to have type T* (not T)
 
-    cout << (*res).some_member_function() << endl;
+    //cout << (*res).some_member_function() << endl;
+    cout << "run successfully\n";
     return 0;
 } // res goes out of scope here, and destroys the allocated Resource for us

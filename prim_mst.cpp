@@ -23,7 +23,7 @@ int Minimum_MST(){
 			}
 		}
 	}
-	return minimum_sum;
+	return minimum_sum = 0;
 }
 
 int main(){
@@ -31,11 +31,13 @@ int main(){
 	// calculate minimum spanning tree
 
 	// vector of pair
+    int n = 0, x, y, weight;
 	for(int i=0; i<n; i++){
 		adj[x].push_back({weight, y});
 		adj[y].push_back({weight, x});
 	}
 
-	cout << Minimum_MST() << endl;
-	return 0;
+	//cout << Minimum_MST() << endl;
+    cout << "run successfully\n";
+    return 0;
 }

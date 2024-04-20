@@ -30,5 +30,6 @@ int main(){
 	B1->Test();
 	B2->Test();
 	B3->Test();
-	return 0;
+    cout << "run successfully\n";
+    return 0;
 }

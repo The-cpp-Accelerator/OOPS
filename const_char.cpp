@@ -18,6 +18,7 @@ int main(){
 
 	ch2 = str3;
 	cout << ch2 << endl;
+    cout << "run successfully\n";
 	return 0;
 }
 

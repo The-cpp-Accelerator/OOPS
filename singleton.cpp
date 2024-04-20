@@ -8,6 +8,8 @@ public:
 		cout << "Instance Created Successfully\n";
 		return Instance;
 	}
+	int mSingle = 1;
+	
 private:
 	// private constructor
 	// prevents from creating instance from outside
@@ -23,5 +25,7 @@ private:
 int main(){
 	//singleton s; --> give error
 	singleton &ins = singleton::GetInstance();
-	return 0;
+    cout << ins.mSingle <<endl;
+	cout << "run successfully\n";
+    return 0;
 }

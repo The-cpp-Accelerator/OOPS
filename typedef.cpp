@@ -19,5 +19,6 @@ struct X {
 int main() {
 	foo<X>();
 	//foo();
-	return 0;
+    cout << "run successfully\n";
+    return 0;
 }

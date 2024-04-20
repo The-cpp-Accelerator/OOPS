@@ -26,7 +26,8 @@ using namespace std;
 // }
 
 void test(int &&p){
-
+ int x = p;
+ cout << x << endl;
 }
 
 
@@ -46,4 +47,6 @@ int main() {
 	// int* x = new int(4);
 	// foo(x);
 	//cout << *x << endl;
+    cout << "run successfully\n";
 }
+

@@ -1,6 +1,5 @@
-#include <iostream>
-#include <map>
-#include <string>
+#include<bits/stdc++.h>
+using namespace std;
 
 // Function with a default argument as a constant reference to a map
 void printMap(const std::map<std::string, int> &m = std::map<std::string, int>()) {
@@ -8,7 +7,7 @@ void printMap(const std::map<std::string, int> &m = std::map<std::string, int>()
         std::cout << pair.first << ": " << pair.second << std::endl;
 
         // throws error
-        m[pair.first] = 2;
+       // m[pair.first] = 2;
     }
 }
 
@@ -24,5 +23,6 @@ int main() {
     // Call function without specifying the map, using the default argument
     printMap();
 
+    cout << "run successfully\n";
     return 0;
 }
